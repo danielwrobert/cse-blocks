@@ -1,0 +1,29 @@
+{
+	"name": "cse-blocks",
+	"version": "1.0.0",
+	"description": "Working files for the Block Develeopment Mastery course - built from scratch.",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"start": "wp-scripts start",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"WordPress",
+		"Gutenberg",
+		"React",
+		"FSE",
+		"WordPress",
+		"Blocks"
+	],
+	"author": "Daniel W. Robert",
+	"license": "ISC",
+	"devDependencies": {
+		"@wordpress/scripts": "^28.0.0"
+	}
+}
