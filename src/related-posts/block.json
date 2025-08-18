@@ -6,7 +6,7 @@
 	"title": "Related Posts",
 	"category": "cse-blocks",
 	"attributes": {
-		"pagesToShow": {
+		"postsToShow": {
 			"type": "number",
 			"default": 5
 		}
@@ -14,5 +14,6 @@
 	"supports": {
 		"html": false
 	},
-	"editorScript": "file:./index.js"
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
 }

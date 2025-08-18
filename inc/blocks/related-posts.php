@@ -10,7 +10,7 @@ add_action( 'init', 'cse_blocks_register_related_posts_block' );
 function cse_blocks_render_related_posts_block( $attributes ) {
 	$posts = new WP_Query( [
 		'post_type' => 'post',
-		'posts_per_page' => $attributes['pagesToShow'],
+		'posts_per_page' => $attributes['postsToShow'],
 	] );
 
 	if ( ! $posts->have_posts() ) {
@@ -20,12 +20,12 @@ function cse_blocks_render_related_posts_block( $attributes ) {
 	ob_start();
 	?>
 	<div <?php echo get_block_wrapper_attributes(); ?>>
-		<h2 class="wp-block-cse-blocks-related-posts">Related Posts</h2>
-		<ul>
+		<h2>Related Posts</h2>
+		<div class="related-posts-grid">
 			<?php foreach ( $posts->posts as $post ) : ?>
-				<li><?php echo esc_html( get_the_title( $post ) ); ?></li>
+				<article><?php echo esc_html( get_the_title( $post ) ); ?></article>
 			<?php endforeach; ?>
-		</ul>
+		</div>
 	</div>
 	<?php
 

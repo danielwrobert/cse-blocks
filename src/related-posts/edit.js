@@ -2,8 +2,10 @@ import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import ServerSideRender from '@wordpress/server-side-render';
 import { PanelBody, RangeControl } from '@wordpress/components';
 
+import './style.scss';
+
 export default function Edit( { attributes, setAttributes } ) {
-	const { pagesToShow } = attributes;
+	const { postsToShow } = attributes;
 
 	return (
 		<>
@@ -11,10 +13,10 @@ export default function Edit( { attributes, setAttributes } ) {
 				<PanelBody title="Query Settings">
 					<RangeControl
 						label="Number of posts"
-						value={ pagesToShow }
+						value={ postsToShow }
 						min={ 1 }
 						max={ 10 }
-						onChange={ value => setAttributes( { pagesToShow: value } ) }
+						onChange={ value => setAttributes( { postsToShow: value } ) }
 					/>
 				</PanelBody>
 			</InspectorControls>
@@ -22,7 +24,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				<ServerSideRender
 					block="cse-blocks/related-posts"
 					attributes={ {
-						pagesToShow
+						postsToShow
 					} }
 				/>
 			</div>
