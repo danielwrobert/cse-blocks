@@ -9,6 +9,10 @@
 		"postsToShow": {
 			"type": "number",
 			"default": 3
+		},
+		"headingText": {
+			"type": "string",
+			"default": "Related Posts"
 		}
 	},
 	"supports": {

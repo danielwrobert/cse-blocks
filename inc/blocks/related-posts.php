@@ -62,7 +62,11 @@ function cse_blocks_render_related_posts_block( $attributes ) {
 
 	?>
 	<div <?php echo get_block_wrapper_attributes(); ?>>
-		<h2>Related Posts</h2>
+		<?php
+		// Only render the heading on the frontend, not in the editor
+		if ( ! $is_editor ) : ?>
+			<h2><?php echo esc_html( $attributes['headingText'] ?? 'Related Posts' ); ?></h2>
+		<?php endif; ?>
 		<div class="related-posts-grid">
 			<?php foreach ( $posts->posts as $post ) : ?>
 				<article class="related-post">
