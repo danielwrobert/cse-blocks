@@ -15,5 +15,6 @@
 // This will cone in handy when registering accests, etc.
 const CSE_BLOCKS_ROOT_DIR = __DIR__;
 
+require_once __DIR__ . '/inc/blocks/animated-hero.php';
 require_once __DIR__ . '/inc/blocks/related-posts.php';
 require_once __DIR__ . '/inc/editor-customizations.php';

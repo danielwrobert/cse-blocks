@@ -1,0 +1,111 @@
+/* Frontend Styles */
+.wp-block-mytheme-animated-hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wp-block-mytheme-animated-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.animated-hero__content {
+  max-width: 800px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.animated-hero__heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: text-shadow 0.3s ease;
+}
+
+.animated-hero__subheading {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  margin: 0 0 2.5rem 0;
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+}
+
+.animated-hero__button {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: none;
+  will-change: transform, box-shadow;
+}
+
+/* For stagger animation - character spans */
+.animated-hero__heading .char {
+  display: inline-block;
+  transform-origin: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wp-block-mytheme-animated-hero {
+    min-height: 400px;
+    padding: 60px 20px;
+  }
+
+  .animated-hero__heading {
+    margin-bottom: 1rem;
+  }
+
+  .animated-hero__subheading {
+    margin-bottom: 2rem;
+  }
+
+  .animated-hero__button {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+/* Alignment support */
+.wp-block-mytheme-animated-hero.alignwide {
+  width: 100%;
+  max-width: var(--wp--style--global--wide-size, 1280px);
+}
+
+.wp-block-mytheme-animated-hero.alignfull {
+  width: 100vw;
+  max-width: none;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

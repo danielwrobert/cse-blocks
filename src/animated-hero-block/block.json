@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cse-blocks/animated-hero",
+	"title": "Animated Hero",
+	"category": "cse-blocks",
+	"icon": "star-filled",
+	"description": "A hero section with GSAP animations",
+	"supports": {
+		"html": false,
+		"align": [
+			"wide",
+			"full"
+		],
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	},
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Welcome to Your Site"
+		},
+		"subheading": {
+			"type": "string",
+			"default": "Beautiful animations powered by GSAP"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Get Started"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"animationStyle": {
+			"type": "string",
+			"default": "fade-up",
+			"enum": [
+				"fade-up",
+				"slide-in",
+				"scale-in",
+				"stagger"
+			]
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#1a1a1a"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"textdomain": "cs-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js"
+}

@@ -1,0 +1,39 @@
+/* Editor-specific styles */
+.wp-block-mytheme-animated-hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.editor-note {
+  margin-top: 2rem;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* Make RichText elements look good in editor */
+.animated-hero__heading[contenteditable="true"],
+.animated-hero__subheading[contenteditable="true"],
+.animated-hero__button[contenteditable="true"] {
+  outline: none;
+}
+
+.animated-hero__heading[contenteditable="true"]:focus,
+.animated-hero__subheading[contenteditable="true"]:focus,
+.animated-hero__button[contenteditable="true"]:focus {
+  outline: 2px solid #007cba;
+  outline-offset: 2px;
+}
+
+/* Empty state placeholders */
+.animated-hero__heading:empty:before,
+.animated-hero__subheading:empty:before,
+.animated-hero__button:empty:before {
+  content: attr(placeholder);
+  opacity: 0.5;
+}
